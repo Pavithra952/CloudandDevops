@@ -1,6 +1,6 @@
 import socket
 import json
-
+#New comment added
 def load_config(config_file):
     try:
         with open(config_file, 'r') as f:
