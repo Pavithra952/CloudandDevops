@@ -7,7 +7,7 @@ WORKDIR /app
 COPY requirements.txt .
 COPY app.py .
 COPY Database_operations.py .
-COPY Flaskapi_methods.py .
+COPY Flaskapimethods.py .
 
 # Install dependencies
 RUN pip install --no-cache-dir -r requirements.txt
@@ -25,10 +25,10 @@ WORKDIR /app
 
 # Copy only necessary files from the builder stage
 COPY --from=builder /app/app.py .
-COPY --from=builder /app/Flaskapi_methods.py .
+COPY --from=builder /app/Flaskapimethods.py .
 
 # Expose the port that your Flask application listens on
 EXPOSE 5000
 
 # Command to start the Flask application
-CMD ["python", "Flaskapi_methods.py"]
+CMD ["python", "Flaskapimethods.py"]
