@@ -11,4 +11,4 @@ COPY client.py config_file.json /app/
 # RUN pip install --trusted-host pypi.python.org -r requirements.txt
 
 # Run the Python script
-CMD ["python", "customer.py"]
+CMD ["python", "customer1.py"]
